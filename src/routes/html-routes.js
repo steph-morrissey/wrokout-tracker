@@ -1,7 +1,5 @@
-const express = require("express");
+const router = require("express").Router();
 const path = require("path");
-
-const router = express.Router();
 
 const statsPath = (req, res) => {
   const filePath = path.join(__dirname, "../public/stats.html");
@@ -13,10 +11,6 @@ const exercisePath = (req, res) => {
   res.sendFile(filePath);
 };
 
-// router.get("/", (res, req) => {
-//   const filePath = path.join(__dirname, "../public");
-//   res.sendFile("/index.html", filePath);
-// });
 router.get("/exercise", exercisePath);
 router.get("/stats", statsPath);
 

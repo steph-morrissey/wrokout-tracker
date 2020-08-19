@@ -2,7 +2,7 @@ const express = require("express");
 const mongoose = require("mongoose");
 const path = require("path");
 const PORT = process.env.PORT || 3000;
-const DB_URI = process.env.MONGODB_URI || "mongodb://localhost/exercises";
+const DB_URI = process.env.MONGODB_URI || "mongodb://localhost/workoutdb";
 
 const apiRoutes = require("./routes/api-routes");
 const htmlRoutes = require("./routes/html-routes");
